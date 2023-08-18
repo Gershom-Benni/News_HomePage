@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+:root{
+    --Primary-orange: hsl(35, 77%, 62%);
+    --Primary-red: hsl(5, 85%, 63%);
+
+    --Neutralwhite: hsl(36, 100%, 99%);
+    --Neutral-Grayish-blue: hsl(233, 8%, 79%);
+    --Neutral-Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Neutral-Very-dark-blue: hsl(240, 100%, 5%);
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+/* Header Styling */
+header{
+    margin-left: 10vw;
+    margin-right:10vw;
+    margin-top: 8vh;
+    margin-bottom: 6vh;
+    display: flex;
+    justify-content: space-between;
+}
+header div img{
+    width: 45px;
+}
+
+header nav ul{
+    padding: 0px;
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+header nav ul li{
+    margin-right:1.7rem;
+    color: var(--Neutral-Dark-grayish-blue);
+    font-size: 0.75rem;
+}
+header nav ul li:nth-child(5){
+    margin-right: 0px;
+}
+/* Main Styling */
+main{
+    margin-left: 10vw;
+    margin-right:10vw;
+    display: grid;
+    grid-template-areas:
+    'img img new'
+    'left left new';
+}
+main img{
+    width: 500px;
+    grid-area: img;
+}
+/* Main Left section */
+
+.main-left-section{
+    grid-area: left;
+    width: 500px;
+}
+
+/* NEW SECTION STYLING */
+.new-section{
+    grid-area: new;
+    width:250px;
+    background-color: var(--Neutral-Very-dark-blue);
+    color: var(--Neutralwhite);
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+}
+.new-section h1{
+    color: var(--Primary-orange);
+    font-weight: var(--fw-bold);
+    font-size: 2rem;
+}
+.new-section h3{
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+.custom-line-break {
+    width: 100%;
+    height: 1px;
+    background-color:var(--Neutral-Dark-grayish-blue);
+    margin-top:15px
+}
+.new-section p{
+    font-size: 0.65rem;
+    line-height: 18px;
+    margin-top: 5px;
+    color:var(--Neutral-Grayish-blue);
+}
