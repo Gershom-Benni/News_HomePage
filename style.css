@@ -22,7 +22,7 @@
     font-weight: inherit;
 }
 /* For PC and Laptops */
-@media only screen and (min-width:768px) and (max-width:1600px) {
+@media only screen and (min-width:768px) {
     body{
         margin: 10vh 6vw;
     }
@@ -101,12 +101,13 @@
     /* Image styling */
     .first-img{
         width:97%;
+        height: fit-content;
     }
     /* Heading Style */
     .main-left-heading-div h1{
         margin-top: 2.5vh;
         font-weight: var(--fw-extra-bold);
-        font-size: 4rem;
+        font-size: clamp(2rem,3.5rem,4rem);
         width: 80%;
     }
     /* Paragraph Styling */
@@ -133,9 +134,76 @@
         letter-spacing: 2px;
         padding: 14px 0px;
         font-size: 1.1rem;
+        transition: background-color 0.15s;
+    }
+    .main-left-paragraph-div button:active{
+        background-color: var(--Neutral-Very-dark-blue);
     }
     .main-black-box{
         background-color: var(--Neutral-Very-dark-blue);
         color: white;
+        padding: 15px 20px;
+    }
+    .main-black-box h1{
+        font-weight: var(--fw-extra-bold);
+        font-size:3.5rem;
+        color: var(--Primary-orange);
+    }
+    .main-black-box h3{
+        color: var(--Neutralwhite);
+        font-weight: var(--fw-bold);
+        font-size: 1.5rem;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    .main-black-box h3:active{
+        color: var(--Primary-orange);
+    }
+    .main-black-box p{
+        color: var(--Neutral-Grayish-blue);
+        font-weight: var(--fw-regular);
+        font-size: 1rem;
+        margin-top: 30px;
+        line-height: 30px;
+    }
+    .custom-line-break {
+        border-top: 1px solid var(--Neutral-Dark-grayish-blue);
+        margin: 30px 0;
+    }
+    .box{
+        margin-top: 7vh;
+        height: 140px;
+        width: 90%;
+        display: flex;
+    }
+    .box img{
+        width:100px;
+        margin-right: 1vw;
+    }
+    .box h1{
+        font-weight: var(--fw-extra-bold);
+        color: var(--Neutral-Grayish-blue);
+        font-size: 2.5rem;
+    }
+    .box h3{
+        font-weight: var(--fw-bold);
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    .box h3:active{
+        color: var(--Primary-red);
+    }
+    .box p{
+        font-weight: var(--fw-regular);
+        color:var(--Neutral-Dark-grayish-blue);
+    }
+    .box div{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width:1250px) {
+        
     }
 }
