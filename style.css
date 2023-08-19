@@ -18,321 +18,124 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    font-size: inherit;
+    font-weight: inherit;
 }
-/* FOR PC AND LAPTOP */
-@media only screen and (min-width: 768px) {
+/* For PC and Laptops */
+@media only screen and (min-width:768px) and (max-width:1600px) {
     body{
-        margin-left: 11vw;
-        margin-right:11vw;
-        margin-top: 12vh;
-        margin-bottom: 13vh;
+        margin: 10vh 6vw;
     }
-    /* Header Styling */
     header{
-        margin-bottom: 6vh;
         display: flex;
         justify-content: space-between;
     }
-    header div img{
-        width: 70px;
+    header img{
+        width: 80px;
     }
-    
-    header nav ul{
-        padding: 0px;
-        list-style: none;
-        margin: 0;
+    header ul{
         display: flex;
+        list-style: none;
     }
-    header nav ul li{
-        margin-right:2.5rem;
+    header div{
+        display: flex;
+        align-items: center;
+    }
+    header ul li{
+        vertical-align: middle;
+        margin-right: 3vw;
         color: var(--Neutral-Dark-grayish-blue);
-        font-size: 1.1rem;
-        cursor: pointer;
+        font-size: 1.2rem;
+        align-items: center;
     }
-    header nav ul li:active{
-        color: var(--Primary-red);
-    }
-    header nav ul li:nth-child(5){
+    header ul :nth-child(5){
         margin-right: 0px;
     }
-    /* Main Styling */
+    header ul li{
+        cursor: pointer;
+    }
+    header ul li:active{
+        color: var(--Primary-red);
+    }
+
+    /* Main Section Styling */
+
     main{
-        width: 78vw;
-        display: flex;
-        justify-content: space-between;
-    }
-    .main-left-section{
-        width: 66%;
-    }
-    .main-left-section img{
-        height: 57%;
+        margin-top: 6vh;
         width: 100%;
+        height:auto;
+        display: grid;
+        grid-template-areas:
+        'img img blackbox'
+        'heading paragraph blackbox'
+        'box1 box2 box3';
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-rows: 2fr 1fr 1fr; */
     }
-    
-    .main-text-div{
-        display: flex;
-        margin-top: 26px;
-        justify-content: space-between;
+    /*Grid area allocation  */
+    .img-div{
+        width:inherit;
+        grid-area: img;
     }
-    .main-text-div h1{
+    .main-left-heading-div{
+        grid-area: heading;
+    }
+    .main-left-paragraph-div{
+        grid-area: paragraph;
+    }
+    .main-black-box{
+        grid-area: blackbox;
+    }
+    .box1{
+        grid-area: box1;
+    }
+    .box2{
+        grid-area: box2;
+    }
+    .box3{
+        grid-area: box3;
+    }
+
+    /*Main Content Styling */
+
+    /* Image styling */
+    .first-img{
+        width:97%;
+    }
+    /* Heading Style */
+    .main-left-heading-div h1{
+        margin-top: 2.5vh;
         font-weight: var(--fw-extra-bold);
-        font-size: 3.7rem;
-        line-height: 60px;
-        width: 40%;
+        font-size: 4rem;
+        width: 80%;
     }
-    .main-text-div-right{
-        width: 45%;
-        margin-right:11px;
+    /* Paragraph Styling */
+    .main-left-paragraph-div p{
+        margin-top: 3vh;
+        font-weight: var(--fw-regular);
+        font-size: 1.1rem;
+        color: var(--Neutral-Dark-grayish-blue);
+        line-height: 1.8rem;
+        width:90%;
+    }
+    .main-left-paragraph-div{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .main-text-div-right p{
-        color: var(--Neutral-Dark-grayish-blue);
-        line-height: 25px;
-        font-size: 1rem;
-    }
-    #readmore-btn{
-        width: fit-content;
+    .main-left-paragraph-div button{
+        cursor: pointer;
+        width: 45%;
         background-color: var(--Primary-red);
+        border: none;
         color: white;
         font-weight: var(--fw-bold);
-        font-size: 1rem;
-        letter-spacing: 4px;
-        border: none;
-        padding: 16px 30px;
-        cursor: pointer;
+        letter-spacing: 2px;
+        padding: 14px 0px;
+        font-size: 1.1rem;
     }
-    #readmore-btn:active{
+    .main-black-box{
         background-color: var(--Neutral-Very-dark-blue);
+        color: white;
     }
-    /* NEW SECTION STYLING */
-    .new-section{
-        width:31.5%;
-        background-color: var(--Neutral-Very-dark-blue);
-        color: var(--Neutralwhite);
-        padding: 28px 24px;
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        height: 100%;
-    }
-    .new-section h1{
-        color: var(--Primary-orange);
-        font-weight: var(--fw-bold);
-        font-size: 2.7rem;
-    }
-    .new-section h3{
-        margin-top: 28px;
-        font-size: 1.325rem;
-        cursor: pointer;
-    }
-    .new-section h3:active{
-        color: var(--Primary-orange);
-    }
-    .custom-line-break {
-        width: 100%;
-        height: 1px;
-        background-color:var(--Neutral-Dark-grayish-blue);
-        margin-top:28px
-    }
-    .new-section p{
-        font-size: 1rem;
-        line-height: 27px;
-        margin-top: 10px;
-        font-weight: var(--fw-regular);
-        color:var(--Neutral-Grayish-blue);
-    }
-    /* Bottom section styling */
-    .section{
-        display: flex;
-        width: 100%;
-        height: fit-content;
-        justify-content: space-between;
-        margin-top:9vh;
-    }
-    /* box1 */
-    .box{
-        width: 30%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .box img{
-        height: 100%;
-        width: 30%;
-    }
-    .box div{
-        width: 65%;
-    }
-    .box div h1{
-        color: var(--Neutral-Grayish-blue);
-        font-size: 3rem;
-    }
-    .box div h3{
-        font-weight: var(--fw-extra-bold);
-        padding: 10px 0;
-        cursor: pointer;
-    }
-    .box div h3:active{
-        color: var(--Primary-red);
-    }
-    .box div p{
-        color: var(--Neutral-Dark-grayish-blue);
-        line-height: 28px;
-    }
-
-    @media only screen and (min-width:1200px) and (max-width:1488px) {
-        body{
-            margin-top: 10vh;
-            margin-bottom: 10vh;
-        }
-        .main-text-div h1{
-            font-weight: var(--fw-extra-bold);
-            font-size: 3rem;
-            line-height: 60px;
-            width: 40%;
-        }
-    }
-    @media only screen and (min-width:1024px) and (max-width:1199px){
-        .main-text-div h1{
-            font-weight: var(--fw-extra-bold);
-            font-size: 2.6rem;
-            line-height: 60px;
-            width: 40%;
-        }
-    }
-    @media only screen and (min-width:768px) and (max-width:1024px){
-        body{
-            margin-top: 9vh;
-            margin-bottom: 9vh;
-        }
-        main{
-            width: 78vw;
-            display: flex;
-            justify-content: space-between;
-        }
-        .main-left-section{
-            width: 66%;
-        }
-        .main-left-section img{
-            height: 45%;
-            width: 100%;
-        }
-        
-        .main-text-div{
-            display: flex;
-            margin-top: 26px;
-            justify-content: space-between;
-        }
-        .main-text-div h1{
-            font-weight: var(--fw-extra-bold);
-            font-size: 2.3rem;
-            line-height: 50px;
-            width: 40%;
-        }
-        .main-text-div-right{
-            width: 45%;
-            margin-right:11px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .main-text-div-right p{
-            color: var(--Neutral-Dark-grayish-blue);
-            line-height: 25px;
-            font-size: .8rem;
-        }
-        #readmore-btn{
-            width: fit-content;
-            background-color: var(--Primary-red);
-            color: white;
-            font-weight: var(--fw-bold);
-            font-size: 1rem;
-            letter-spacing: 4px;
-            border: none;
-            padding: 16px 30px;
-            cursor: pointer;
-        }
-        #readmore-btn:active{
-            background-color: var(--Neutral-Very-dark-blue);
-        }
-        /* NEW SECTION STYLING */
-        .new-section{
-            width:31.5%;
-            background-color: var(--Neutral-Very-dark-blue);
-            color: var(--Neutralwhite);
-            padding: 20px 18px;
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-            height: 100%;
-        }
-        .new-section h1{
-            color: var(--Primary-orange);
-            font-weight: var(--fw-bold);
-            font-size: 2rem;
-        }
-        .new-section h3{
-            margin-top: 15px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        .new-section h3:active{
-            color: var(--Primary-orange);
-        }
-        .custom-line-break {
-            width: 100%;
-            height: 1px;
-            background-color:var(--Neutral-Dark-grayish-blue);
-            margin-top:15px
-        }
-        .new-section p{
-            font-size: .8rem;
-            line-height: 20px;
-            margin-top: 10px;
-            font-weight: var(--fw-regular);
-            color:var(--Neutral-Grayish-blue);
-        }
-
-    .section{
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            justify-content: space-between;
-            margin-top:7vh;
-        }
-    .box{
-        width: 30%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .box img{
-        height: 100%;
-        width: 33%;
-    }
-    .box div{
-        width: 65%;
-    }
-    .box div h1{
-        color: var(--Neutral-Grayish-blue);
-        font-size: 1rem;
-    }
-    .box div h3{
-        font-size: 0.8rem;
-        font-weight: var(--fw-extra-bold);
-        cursor: pointer;
-        padding: 5px 0px;
-    }
-    .box div h3:active{
-        color: var(--Primary-red);
-    }
-    .box div p{
-        color: var(--Neutral-Dark-grayish-blue);
-        line-height: 14px;
-        font-size: 0.7rem;
-    }
-    }
-    
-
 }
-  
